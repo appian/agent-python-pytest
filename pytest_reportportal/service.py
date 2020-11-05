@@ -641,8 +641,7 @@ class PyTestServiceClass(with_metaclass(Singleton, object)):
                     marker_values.append("{}:{}".format(keyword, arg))
             else:
                 marker_values.append(keyword)
-            # returns a list of strings to accommodate multiple values
-            return marker_values
+            return marker_values  # returns a list of strings to accommodate multiple tags
 
         try:
             get_marker = getattr(item, "get_closest_marker")
